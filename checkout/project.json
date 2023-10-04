@@ -51,7 +51,7 @@
       "options": {
         "buildTarget": "checkout:build",
         "hmr": true,
-        "port": 4202
+        "port": 4199
       },
       "configurations": {
         "development": {
@@ -76,7 +76,7 @@
       "options": {
         "buildTarget": "checkout:build",
         "watch": false,
-        "port": 4202
+        "port": 4199
       },
       "configurations": {
         "development": {

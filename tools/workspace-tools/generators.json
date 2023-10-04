@@ -1,0 +1,9 @@
+{
+  "generators": {
+    "create-x-remotes": {
+      "factory": "./src/generators/create-x-remotes/generator",
+      "schema": "./src/generators/create-x-remotes/schema.json",
+      "description": "create-x-remotes generator"
+    }
+  }
+}

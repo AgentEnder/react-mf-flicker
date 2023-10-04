@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$id": "CreateXRemotes",
+  "title": "",
+  "type": "object",
+  "properties": {
+    "x": {
+      "type": "number",
+      "description": "How many remotes should be added",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      }
+    }
+  },
+  "required": ["x"]
+}

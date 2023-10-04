@@ -8,6 +8,7 @@
 export function NxWelcome({ title }: { title: string }) {
   return (
     <>
+    SomeMoreStuff
       <style
         dangerouslySetInnerHTML={{
           __html: `

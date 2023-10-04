@@ -10,11 +10,66 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": ["es2020", "dom"],
+    "lib": [
+      "es2020",
+      "dom"
+    ],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@react-mf-flicker/workspace-tools": [
+        "tools/workspace-tools/src/index.ts"
+      ],
+      "remote-4202/Module": [
+        "remote-4202/src/remote-entry.ts"
+      ],
+      "remote-4203/Module": [
+        "remote-4203/src/remote-entry.ts"
+      ],
+      "remote-4204/Module": [
+        "remote-4204/src/remote-entry.ts"
+      ],
+      "remote-4205/Module": [
+        "remote-4205/src/remote-entry.ts"
+      ],
+      "remote-4206/Module": [
+        "remote-4206/src/remote-entry.ts"
+      ],
+      "remote-4207/Module": [
+        "remote-4207/src/remote-entry.ts"
+      ],
+      "remote-4208/Module": [
+        "remote-4208/src/remote-entry.ts"
+      ],
+      "remote-4209/Module": [
+        "remote-4209/src/remote-entry.ts"
+      ],
+      "remote-4210/Module": [
+        "remote-4210/src/remote-entry.ts"
+      ],
+      "remote-4211/Module": [
+        "remote-4211/src/remote-entry.ts"
+      ],
+      "remote-4212/Module": [
+        "remote-4212/src/remote-entry.ts"
+      ],
+      "remote-4213/Module": [
+        "remote-4213/src/remote-entry.ts"
+      ],
+      "remote-4214/Module": [
+        "remote-4214/src/remote-entry.ts"
+      ],
+      "remote-4215/Module": [
+        "remote-4215/src/remote-entry.ts"
+      ],
+      "remote-4216/Module": [
+        "remote-4216/src/remote-entry.ts"
+      ]
+    }
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
 }

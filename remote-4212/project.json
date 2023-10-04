@@ -1,0 +1,119 @@
+{
+  "name": "remote-4212",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "remote-4212/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/remote-4212",
+        "index": "remote-4212/src/index.html",
+        "baseHref": "/",
+        "main": "remote-4212/src/main.ts",
+        "tsConfig": "remote-4212/tsconfig.app.json",
+        "assets": [
+          "remote-4212/src/favicon.ico",
+          "remote-4212/src/assets"
+        ],
+        "styles": [
+          "remote-4212/src/styles.scss"
+        ],
+        "scripts": [],
+        "isolatedConfig": true,
+        "webpackConfig": "remote-4212/webpack.config.ts"
+      },
+      "configurations": {
+        "development": {
+          "extractLicenses": false,
+          "optimization": false,
+          "sourceMap": true,
+          "vendorChunk": true
+        },
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "remote-4212/src/environments/environment.ts",
+              "with": "remote-4212/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false,
+          "webpackConfig": "remote-4212/webpack.config.prod.ts"
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/react:module-federation-dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "remote-4212:build",
+        "hmr": true,
+        "port": 4212
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "remote-4212:build:development"
+        },
+        "production": {
+          "buildTarget": "remote-4212:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "remote-4212/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
+      "options": {
+        "jestConfig": "remote-4212/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "defaultConfiguration": "production",
+      "options": {
+        "buildTarget": "remote-4212:build",
+        "watch": false,
+        "port": 4212
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "remote-4212:build:development"
+        },
+        "production": {
+          "buildTarget": "remote-4212:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}
